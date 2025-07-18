@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teldr:Intelligent Media Analysis Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
+        }
+        .btn-primary {
+            @apply px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out;
+        }
+        .feature-card {
+            @apply bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl;
+        }
+        .icon-circle {
+            @apply w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 text-2xl;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo - Updated with PNG/GIF placeholder -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://placehold.co/120x40/6366f1/ffffff?text=Teldr.ai" alt="Teldr.ai Logo" class="h-10 rounded-md">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="nav-links" class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8">
+                <a href="#dashboard" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Dashboard</a>
+                <a href="#product" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Product</a>
+                <a href="#pricing" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Pricing</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">About</a>
+                <a href="#signin-signup" class="btn-primary">Sign In/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="dashboard" class="gradient-bg text-white py-20 px-4 rounded-b-3xl shadow-lg">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                Unlock Insights from Your Media, Instantly.
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+                Our AI-powered platform transforms long video and audio files into searchable, summarized, and interactive content.
+            </p>
+            <a href="#" class="btn-primary bg-white text-indigo-600 hover:bg-gray-100">
+                Get Started Free
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem Statement Section -->
+    <section id="problem" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">The Problem We Solve</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Manually analyzing video and audio files is a tedious, time-consuming, and error-prone process. Whether it's reviewing hours of surveillance footage, transcribing lengthy interviews, or finding specific moments in a podcast, the effort required can be immense, leading to missed insights and inefficiencies.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    There's a critical need for intelligent tools that can automatically understand, summarize, and make media content easily searchable, freeing up valuable human resources for more strategic tasks.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="product" class="bg-indigo-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Our Solution: Teldr.ai</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Teldr.ai revolutionizes how you interact with media. Simply upload your audio or video, and our advanced AI goes to work, providing you with a comprehensive, actionable breakdown of its content.
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-3">
+                        <li><strong class="text-indigo-600">Automatic Summaries:</strong> Get concise overviews of long media.</li>
+                        <li><strong class="text-indigo-600">Event Timelines:</strong> Pinpoint key moments with precise timestamps.</li>
+                        <li><strong class="text-indigo-600">Full Transcripts:</strong> Accurate speech-to-text for every word spoken.</li>
+                        <li><strong class="text-indigo-600">Visual Thumbnails:</strong> Navigate content visually with ease.</li>
+                        <li><strong class="text-indigo-600">Natural Language Q&A:</strong> Ask questions and get context-aware answers instantly.</li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <!-- Placeholder Image for Solution -->
+                    <img src="https://placehold.co/600x400/e0e7ff/4338ca?text=AI+Media+Analysis" alt="AI Media Analysis Solution" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-upload"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Media Upload Interface</h3>
+                    <p class="text-gray-600">Easily upload audio and video files in all common formats.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">AI-Powered Summary Engine</h3>
+                    <p class="text-gray-600">Intelligent algorithms summarize content and extract core insights.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Time-Stamped Event Timeline</h3>
+                    <p class="text-gray-600">Visualize key events and navigate directly to specific moments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Full Transcript Viewer</h3>
+                    <p class="text-gray-600">Accurate, time-aligned transcripts for every word spoken.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-images"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Thumbnails for Key Events</h3>
+                    <p class="text-gray-600">Visual cues for easy browsing and quick content identification.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-question-circle"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Natural Language Q&A</h3>
+                    <p class="text-gray-600">Ask questions like "Was there a car around 2:15 PM?" and get answers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-search"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Advanced Search Functionality</h3>
+                    <p class="text-gray-600">Quickly find specific words, phrases, or events within your media.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Users Section -->
+    <section id="users" class="bg-indigo-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Who Benefits?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Security Teams</h3>
+                    <p class="text-gray-600">Efficiently review surveillance footage for incidents.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-microphone-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Journalists & Podcasters</h3>
+                    <p class="text-gray-600">Quickly analyze interviews, reports, and long recordings.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-gavel"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Legal Professionals</h3>
+                    <p class="text-gray-600">Parse depositions and testimonies with ease.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Automated Robots</h3>
+                    <p class="text-gray-600">Identify specific patterns and alert owners.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="fas fa-users"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">General Users</h3>
+                    <p class="text-gray-600">Fast understanding of any long recording.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">About Teldr.ai</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    The team behind Teldr.ai is led by a graduate student specializing in AI & Machine Learning at Manipal University Jaipur. This platform is their vision brought to life, created to tackle the pervasive challenge of efficiently analyzing vast amounts of video and audio content.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    The goal with Teldr.ai is to revolutionize media analysis by leveraging cutting-edge AI to provide instant summaries, accurate transcripts, and intelligent search capabilities. This platform is designed to save countless hours for professionals and general users alike, transforming how they interact with digital media.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Looking ahead, Teldr.ai is committed to continuously enhancing the platform. They will be adding a number of powerful productivity features to ensure busy teams can utilize this platform more holistically, integrating seamlessly into their workflows and further boosting efficiency.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="signin-signup" class="gradient-bg text-white py-20 px-4 rounded-t-3xl shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Media Analysis?</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+                Sign up today and experience the power of AI-driven media intelligence.
+            </p>
+            <a href="#" class="btn-primary bg-white text-indigo-600 hover:bg-gray-100">
+                Start Your Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Teldr.ai. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('mt-4'); // Add some margin when expanded
+            navLinks.classList.toggle('w-full'); // Make it full width when expanded
+            navLinks.classList.toggle('items-center'); // Center items when expanded
+            navLinks.classList.toggle('justify-center'); // Center items when expanded
+            navLinks.classList.toggle('bg-white'); // Add background for better visibility
+            navLinks.classList.toggle('py-4'); // Add padding
+            navLinks.classList.toggle('rounded-lg'); // Rounded corners
+            navLinks.classList.toggle('shadow-md'); // Shadow
+        });
+
+        // Close mobile menu when a link is clicked (optional)
+        document.querySelectorAll('#nav-links a').forEach(item => {
+            item.addEventListener('click', () => {
+                const navLinks = document.getElementById('nav-links');
+                if (!navLinks.classList.contains('hidden')) {
+                    navLinks.classList.add('hidden');
+                    navLinks.classList.remove('flex', 'mt-4', 'w-full', 'items-center', 'justify-center', 'bg-white', 'py-4', 'rounded-lg', 'shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
