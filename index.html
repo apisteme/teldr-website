@@ -13,14 +13,15 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #ffffff;
             overflow-x: hidden;
         }
         
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
         }
         
         .hero-gradient {
@@ -57,7 +58,7 @@
         }
         
         .text-glow {
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
         }
         
         .pulse-glow {
@@ -91,7 +92,7 @@
         
         .card-hover:hover {
             transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.2);
         }
         
         .feature-icon {
@@ -104,12 +105,12 @@
         }
         
         .typing-effect {
-            border-right: 3px solid rgba(255, 255, 255, 0.8);
+            border-right: 3px solid rgba(102, 126, 234, 0.8);
             animation: blink 1s infinite;
         }
         
         @keyframes blink {
-            0%, 50% { border-color: rgba(255, 255, 255, 0.8); }
+            0%, 50% { border-color: rgba(102, 126, 234, 0.8); }
             51%, 100% { border-color: transparent; }
         }
         
@@ -164,7 +165,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
             animation: float-particle 10s linear infinite;
         }
@@ -205,9 +206,8 @@
         
         .interactive-demo {
             position: relative;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(102, 126, 234, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.1);
             border-radius: 20px;
             padding: 2rem;
             transition: all 0.3s ease;
@@ -215,7 +215,7 @@
         
         .interactive-demo:hover {
             transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1);
         }
         
         .progress-bar {
@@ -235,9 +235,32 @@
         .demo-active .progress-bar {
             width: 100%;
         }
+        
+        .text-dark {
+            color: #1a1a1a;
+        }
+        
+        .text-gray {
+            color: #6b7280;
+        }
+        
+        .section-bg {
+            background: #f8fafc;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+        
+        .demo-result-card {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
     </style>
 </head>
-<body class="text-white">
+<body class="text-dark">
     <!-- Particle Background -->
     <div class="particle-bg">
         <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
@@ -256,15 +279,15 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="brand-logo">Teldr.ai</div>
             
-            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="lg:hidden text-dark focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
             
             <div id="nav-links" class="hidden lg:flex items-center space-x-8">
-                <a href="#features" class="text-white/80 hover:text-white font-medium transition duration-300 hover:scale-105">Features</a>
-                <a href="#demo" class="text-white/80 hover:text-white font-medium transition duration-300 hover:scale-105">Demo</a>
-                <a href="#pricing" class="text-white/80 hover:text-white font-medium transition duration-300 hover:scale-105">Pricing</a>
-                <a href="#about" class="text-white/80 hover:text-white font-medium transition duration-300 hover:scale-105">About</a>
+                <a href="#features" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Features</a>
+                <a href="#demo" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Demo</a>
+                <a href="#pricing" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Pricing</a>
+                <a href="about.html" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">About</a>
                 <button class="hero-button text-white px-6 py-3 rounded-full font-semibold neon-border">
                     Launch App
                 </button>
@@ -276,7 +299,7 @@
     <section class="hero-gradient min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         <div class="container mx-auto text-center relative z-10">
             <div class="scroll-reveal">
-                <h1 class="text-6xl md:text-8xl font-black mb-6 text-glow">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 text-white">
                     Decode Your Media
                     <span class="block text-4xl md:text-6xl font-light typing-effect mt-4">
                         in Seconds, Not Hours
@@ -291,7 +314,7 @@
                         <i class="fas fa-rocket mr-2"></i>
                         Start Free Trial
                     </button>
-                    <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300">
+                    <button class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300 border border-white/30">
                         <i class="fas fa-play mr-2"></i>
                         Watch Demo
                     </button>
@@ -300,23 +323,23 @@
             
             <!-- Floating Elements -->
             <div class="absolute top-20 left-10 floating-animation">
-                <div class="w-20 h-20 bg-white/20 rounded-full glow-effect"></div>
+                <div class="w-20 h-20 bg-white/30 rounded-full glow-effect"></div>
             </div>
             <div class="absolute top-40 right-20 floating-animation">
-                <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 morphing-blob opacity-30"></div>
+                <div class="w-32 h-32 bg-gradient-to-br from-white/30 to-white/10 morphing-blob"></div>
             </div>
             <div class="absolute bottom-40 left-20 floating-animation">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-lg glow-effect opacity-40"></div>
+                <div class="w-16 h-16 bg-gradient-to-br from-white/20 to-white/10 rounded-lg glow-effect"></div>
             </div>
         </div>
     </section>
 
     <!-- Interactive Demo Section -->
-    <section id="demo" class="py-20 px-4 relative">
+    <section id="demo" class="py-20 px-4 relative bg-white">
         <div class="container mx-auto">
             <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-5xl font-bold mb-6 text-glow">Experience the Magic</h2>
-                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                <h2 class="text-5xl font-bold mb-6 text-dark text-glow">Experience the Magic</h2>
+                <p class="text-xl text-gray max-w-3xl mx-auto">
                     Watch our AI analyze a sample video in real-time. This is just a glimpse of what Teldr.ai can do.
                 </p>
             </div>
@@ -329,30 +352,32 @@
                                 <i class="fas fa-video text-white"></i>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg">sample_meeting.mp4</h3>
-                                <p class="text-white/60">45 min • 1.2 GB</p>
+                                <h3 class="font-semibold text-lg text-dark">sample_meeting.mp4</h3>
+                                <p class="text-gray">45 min • 1.2 GB</p>
                             </div>
                         </div>
-                        <button class="hero-button px-6 py-3 rounded-lg font-semibold" onclick="startDemo()">
+                        <button class="hero-button px-6 py-3 rounded-lg font-semibold text-white" onclick="startDemo()">
                             <i class="fas fa-brain mr-2"></i>
                             Analyze with AI
                         </button>
                     </div>
                     
-                    <div class="progress-bar mb-6" id="progress-bar"></div>
+                    <div class="bg-gray-200 rounded-full h-2 mb-6">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
                     
                     <div class="grid md:grid-cols-3 gap-6" id="demo-results" style="display: none;">
-                        <div class="bg-white/10 p-4 rounded-lg">
-                            <h4 class="font-semibold mb-2">🎯 Key Insights</h4>
-                            <p class="text-sm text-white/80">Budget approval discussion, Q3 targets, new hire proposals</p>
+                        <div class="demo-result-card p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-dark">🎯 Key Insights</h4>
+                            <p class="text-sm text-gray">Budget approval discussion, Q3 targets, new hire proposals</p>
                         </div>
-                        <div class="bg-white/10 p-4 rounded-lg">
-                            <h4 class="font-semibold mb-2">⏱️ Timeline</h4>
-                            <p class="text-sm text-white/80">5 key moments identified with timestamps</p>
+                        <div class="demo-result-card p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-dark">⏱️ Timeline</h4>
+                            <p class="text-sm text-gray">5 key moments identified with timestamps</p>
                         </div>
-                        <div class="bg-white/10 p-4 rounded-lg">
-                            <h4 class="font-semibold mb-2">🔍 Searchable</h4>
-                            <p class="text-sm text-white/80">Full transcript with speaker identification</p>
+                        <div class="demo-result-card p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-dark">🔍 Searchable</h4>
+                            <p class="text-sm text-gray">Full transcript with speaker identification</p>
                         </div>
                     </div>
                 </div>
@@ -361,72 +386,72 @@
     </section>
 
     <!-- Features Grid -->
-    <section id="features" class="py-20 px-4">
+    <section id="features" class="py-20 px-4 section-bg">
         <div class="container mx-auto">
             <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-5xl font-bold mb-6 text-glow">Supercharge Your Workflow</h2>
-                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                <h2 class="text-5xl font-bold mb-6 text-dark text-glow">Supercharge Your Workflow</h2>
+                <p class="text-xl text-gray max-w-3xl mx-auto">
                     Every feature designed to save you time and unlock insights you never knew existed.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Lightning Processing</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Lightning Processing</h3>
+                    <p class="text-gray leading-relaxed">
                         Upload gigabytes of media and get comprehensive analysis in minutes, not hours. Our AI works at superhuman speed.
                     </p>
                 </div>
                 
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-search-plus"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Intelligent Search</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Intelligent Search</h3>
+                    <p class="text-gray leading-relaxed">
                         Ask natural questions like "When did they discuss the budget?" and get exact timestamps with context.
                     </p>
                 </div>
                 
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Smart Summaries</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Smart Summaries</h3>
+                    <p class="text-gray leading-relaxed">
                         Get executive summaries, key takeaways, and action items automatically extracted from your content.
                     </p>
                 </div>
                 
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Visual Intelligence</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Visual Intelligence</h3>
+                    <p class="text-gray leading-relaxed">
                         Automatically generated thumbnails and visual cues help you navigate content at a glance.
                     </p>
                 </div>
                 
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Precise Timestamps</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Precise Timestamps</h3>
+                    <p class="text-gray leading-relaxed">
                         Jump to any moment instantly with AI-generated event timelines and speaker annotations.
                     </p>
                 </div>
                 
-                <div class="glass-effect p-8 rounded-2xl card-hover scroll-reveal">
+                <div class="feature-card p-8 rounded-2xl card-hover scroll-reveal">
                     <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Enterprise Security</h3>
-                    <p class="text-white/80 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Enterprise Security</h3>
+                    <p class="text-gray leading-relaxed">
                         Your data stays secure with end-to-end encryption and compliance with industry standards.
                     </p>
                 </div>
@@ -435,11 +460,11 @@
     </section>
 
     <!-- Use Cases -->
-    <section class="py-20 px-4 bg-black/20">
+    <section class="py-20 px-4 bg-white">
         <div class="container mx-auto">
             <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-5xl font-bold mb-6 text-glow">Built for Modern Teams</h2>
-                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                <h2 class="text-5xl font-bold mb-6 text-dark text-glow">Built for Modern Teams</h2>
+                <p class="text-xl text-gray max-w-3xl mx-auto">
                     From security teams to content creators, Teldr.ai transforms how professionals handle media.
                 </p>
             </div>
@@ -449,45 +474,45 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl glow-effect">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Security Teams</h3>
-                    <p class="text-white/70">Analyze surveillance footage 100x faster than manual review</p>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Security Teams</h3>
+                    <p class="text-gray">Analyze surveillance footage 100x faster than manual review</p>
                 </div>
                 
                 <div class="text-center scroll-reveal">
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl glow-effect">
                         <i class="fas fa-microphone"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Content Creators</h3>
-                    <p class="text-white/70">Turn hours of footage into highlight reels and searchable content</p>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Content Creators</h3>
+                    <p class="text-gray">Turn hours of footage into highlight reels and searchable content</p>
                 </div>
                 
                 <div class="text-center scroll-reveal">
                     <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-400 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl glow-effect">
                         <i class="fas fa-gavel"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Legal Teams</h3>
-                    <p class="text-white/70">Extract key testimony and evidence from depositions instantly</p>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Legal Teams</h3>
+                    <p class="text-gray">Extract key testimony and evidence from depositions instantly</p>
                 </div>
                 
                 <div class="text-center scroll-reveal">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white text-3xl glow-effect">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Business Teams</h3>
-                    <p class="text-white/70">Transform meeting recordings into actionable insights</p>
+                    <h3 class="text-xl font-bold mb-4 text-dark">Business Teams</h3>
+                    <p class="text-gray">Transform meeting recordings into actionable insights</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 px-4 relative">
+    <section class="py-20 px-4 relative section-bg">
         <div class="container mx-auto text-center">
             <div class="max-w-4xl mx-auto scroll-reveal">
-                <h2 class="text-5xl md:text-6xl font-black mb-6 text-glow">
+                <h2 class="text-5xl md:text-6xl font-black mb-6 text-dark text-glow">
                     Ready to Transform Your Media?
                 </h2>
-                <p class="text-xl md:text-2xl mb-12 text-white/80 leading-relaxed">
+                <p class="text-xl md:text-2xl mb-12 text-gray leading-relaxed">
                     Join thousands of professionals who've already revolutionized their workflow. 
                     Start your free trial today and experience the future of media analysis.
                 </p>
@@ -496,12 +521,12 @@
                         <i class="fas fa-rocket mr-3"></i>
                         Start Free Trial
                     </button>
-                    <button class="glass-effect text-white px-10 py-5 rounded-full font-semibold text-xl hover:scale-105 transition-all duration-300">
+                    <button class="bg-white border-2 border-gray-200 text-dark px-10 py-5 rounded-full font-semibold text-xl hover:scale-105 transition-all duration-300 hover:border-purple-400">
                         <i class="fas fa-calendar mr-3"></i>
                         Book Demo
                     </button>
                 </div>
-                <p class="text-white/60 mt-8 text-sm">
+                <p class="text-gray mt-8 text-sm">
                     ✨ No credit card required • 14-day free trial • Cancel anytime
                 </p>
             </div>
@@ -509,17 +534,19 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black/40 py-12 px-4">
+    <footer class="bg-gray-900 py-12 px-4">
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="brand-logo mb-4 md:mb-0">Teldr.ai</div>
-                <div class="flex space-x-8 text-white/60">
+                <div class="text-white font-bold text-2xl mb-4 md:mb-0">
+                    <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Teldr.ai</span>
+                </div>
+                <div class="flex space-x-8 text-gray-400">
                     <a href="#" class="hover:text-white transition duration-300">Privacy</a>
                     <a href="#" class="hover:text-white transition duration-300">Terms</a>
                     <a href="#" class="hover:text-white transition duration-300">Contact</a>
                 </div>
             </div>
-            <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Teldr.ai. Powered by AI, built for humans.</p>
             </div>
         </div>
