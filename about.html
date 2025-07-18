@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Teldr.ai</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-dark { color: #2D3748; }
+        .text-gray { color: #718096; }
+        
+        .section-bg {
+            background-color: #F7FAFC;
+        }
+
+        .feature-card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form button {
+            background: linear-gradient(135deg, #6366F1, #7C3AED);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-dark">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full top-0 z-50 py-4 px-4 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">
+                <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Teldr.ai</span>
+            </a>
+            
+            <button id="mobile-menu-button" class="lg:hidden text-dark focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <div id="nav-links" class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#features" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Features</a>
+                <a href="index.html#demo" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Demo</a>
+                <a href="index.html#pricing" class="text-gray hover:text-dark font-medium transition duration-300 hover:scale-105">Pricing</a>
+                <a href="about.html" class="text-dark font-medium transition duration-300 hover:scale-105">About</a>
+                <button class="hero-button bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition duration-300">
+                    Launch App
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-b from-purple-50 to-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-6">About Teldr.ai</h1>
+            <p class="text-xl text-gray max-w-3xl mx-auto mb-12">
+                Revolutionizing productivity through innovative AI solutions
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Meet Our Team</h2>
+                <p class="text-xl text-gray max-w-3xl mx-auto">
+                    Led by passionate innovators from Manipal University's AI & ML program, 
+                    we're committed to transforming how people work with media.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="team-card p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-indigo-500 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Graduate Student</h3>
+                    <p class="text-gray mb-4">AI & ML Class of '27</p>
+                    <p class="text-gray mb-6">
+                        Leading the vision and development of Teldr.ai, bringing cutting-edge 
+                        AI technology to solve real-world productivity challenges.
+                    </p>
+                    <p class="text-purple-600 font-medium">Manipal University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Our Vision</h2>
+                        <p class="text-gray mb-6">
+                            At Teldr.ai, we envision a future where AI seamlessly integrates into everyday workflows, 
+                            making complex tasks simple and time-consuming processes efficient.
+                        </p>
+                        <p class="text-gray">
+                            In the coming days, we'll be introducing various productivity tools designed to make your 
+                            work seamless and more efficient than ever before.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-rocket text-purple-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold mb-2">Innovation First</h3>
+                                    <p class="text-gray">Constantly pushing the boundaries of what's possible with AI</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-users text-indigo-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold mb-2">User-Centric</h3>
+                                    <p class="text-gray">Building solutions that address real user needs</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-pink-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold mb-2">Security Focused</h3>
+                                    <p class="text-gray">Ensuring your data is always protected</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-xl text-gray">
+                        Have questions or want to learn more about our upcoming products? 
+                        We'd love to hear from you.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-purple-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold mb-2">Location</h3>
+                                <p class="text-gray">Manipal University, Karnataka, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold mb-2">Email</h3>
+                                <p class="text-gray">contact@teldr.ai</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-purple-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold mb-2">Phone</h3>
+                                <p class="text-gray">+91 (800) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white font-bold text-2xl mb-4 md:mb-0">
+                    <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Teldr.ai</span>
+                </div>
+                <div class="flex space-x-8 text-gray-400">
+                    <a href="#" class="hover:text-white transition duration-300">Privacy</a>
+                    <a href="#" class="hover:text-white transition duration-300">Terms</a>
+                    <a href="#" class="hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Teldr.ai. Powered by AI, built for humans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
